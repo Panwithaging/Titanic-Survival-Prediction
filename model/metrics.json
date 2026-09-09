@@ -1,0 +1,11 @@
+{
+    "Model": "Support Vector Classifier",
+    "Accuracy": 0.8156424581005587,
+    "Training_time": 10.292830200007302,
+    "Best parameters": {
+        "C": 1,
+        "Kernel": "rbf",
+        "Gamma": "scale"
+    },
+    "cv score": 0.8244853737811486
+}
