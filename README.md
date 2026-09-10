@@ -150,6 +150,3 @@ Kaggle Titanic: Machine Learning from Disaster dataset.
 **Tushar Panging**
 
 GitHub: https://github.com/Panwithaging
-**Tushar Panging**
-
-GitHub: https://github.com/Panwithaging
