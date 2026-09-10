@@ -1,7 +1,7 @@
 {
     "Model": "Support Vector Classifier",
     "Accuracy": 0.8156424581005587,
-    "Training_time": 10.292830200007302,
+    "Training_time": 10.036954699986381,
     "Best parameters": {
         "C": 1,
         "Kernel": "rbf",

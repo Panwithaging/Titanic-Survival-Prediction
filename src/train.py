@@ -35,17 +35,20 @@ grid=GridSearchCV(estimator=clf,
                   param_grid=params,
                   cv=5,
                   scoring='accuracy',
-                  n_jobs=-1)
+                  n_jobs=-1,
+                  verbose=3)
+print("1")
 start_train=time.perf_counter()
 grid.fit(x_train,y_train)
 
 pred=grid.predict(x_val)
 score=accuracy_score(y_val,pred)
+print("2")
 
 training_time=time.perf_counter()-start_train
-
+print("3")
 joblib.dump(grid.best_estimator_,"model/titanic_pipeline.pkl")
-
+print("4")
 metrics={
     "Model":"Support Vector Classifier",
     "Accuracy": score,
@@ -57,7 +60,7 @@ metrics={
         },
     "cv score":grid.best_score_
 }
-
+print("5")
 with open("model/metrics.json","w") as f:
     json.dump(metrics,f,indent=4)
 
