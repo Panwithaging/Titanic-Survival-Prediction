@@ -1,190 +1,147 @@
-# Titanic Survival Prediction using Machine Learning
+# Titanic Survival Prediction
 
-Predicting passenger survival on the Titanic using supervised machine learning techniques. This project demonstrates an end-to-end machine learning workflow, including data cleaning, exploratory data analysis (EDA), feature engineering, preprocessing, model comparison, hyperparameter tuning, and Kaggle submission.
-
----
-
-## Project Overview
-
-The goal of this project is to build a classification model that predicts whether a passenger survived the Titanic disaster based on passenger information such as age, gender, ticket class, fare, and family relationships.
-
-The project follows a complete machine learning pipeline from raw data to final prediction.
+A Machine Learning web application that predicts whether a passenger would have survived the Titanic disaster using a **Support Vector Machine (SVM)**. The project includes feature engineering, preprocessing, hyperparameter tuning with **GridSearchCV**, and an interactive **Streamlit** interface.
 
 ---
 
-## Dataset
+## Live Demo
 
-**Source:** Kaggle Titanic - Machine Learning from Disaster
-
-https://www.kaggle.com/competitions/titanic/data
-
-### Features
-
-- PassengerId
-- Pclass
-- Name
-- Sex
-- Age
-- SibSp
-- Parch
-- Ticket
-- Fare
-- Cabin
-- Embarked
-
-### Target Variable
-
-- **Survived**
-  - `0` → Did Not Survive
-  - `1` → Survived
+**Streamlit App:** *(Add your deployed app link here)*
 
 ---
 
-## Project Workflow
+## Features
 
-- Data Cleaning
-- Exploratory Data Analysis (EDA)
-- Feature Engineering
-- Data Preprocessing
-- Model Training
-- Model Evaluation
-- Hyperparameter Tuning (GridSearchCV)
-- Final Prediction
-- Kaggle Submission
+- Predicts passenger survival in real time
+- Interactive Streamlit web interface
+- User-friendly sidebar for passenger information
+- Displays prediction confidence
+- Visualizes prediction using charts
+- Shows trained model performance metrics
+- Uses a saved machine learning pipeline
 
 ---
 
-## Feature Engineering
-
-The following features were created to improve model performance:
-
-- Family Size
-- IsAlone
-- Passenger Title
-- Deck Information
-- Log Transformation of Fare
-
----
-
-## Data Preprocessing
-
-- Missing Value Imputation
-- One-Hot Encoding
-- Standard Scaling
-- ColumnTransformer
-- Pipeline
-
----
-
-## Models Evaluated
-
-- Logistic Regression
-- K-Nearest Neighbors (KNN)
-- Support Vector Machine (SVM)
-- Decision Tree
-- Random Forest
-
----
-
-## Evaluation Metrics
-
-The models were compared using:
-
-- Cross Validation Score
-- Accuracy Score
-- Confusion Matrix
-- Classification Report
-
----
-
-## Hyperparameter Tuning
-
-GridSearchCV was used to optimize the following models:
-
-- Support Vector Machine (SVM)
-- Logistic Regression
-- K-Nearest Neighbors (KNN)
-
----
-
-## Final Model
-
-**Support Vector Machine (SVM)**
-
-### Best Parameters
-
-```python
-kernel = "rbf"
-C = 1
-gamma = "scale"
-```
-
----
-
-## Kaggle Results
-
-| Metric | Value |
-|--------|-------|
-| Public Leaderboard Score | **0.78229** |
-| Final Model | Support Vector Machine (SVM) |
-
----
-
-## Technologies Used
+## Tech Stack
 
 - Python
 - Pandas
 - NumPy
-- Matplotlib
-- Seaborn
 - Scikit-learn
-- Jupyter Notebook
+- Matplotlib
+- Streamlit
+- Joblib
 
 ---
 
-## Repository Structure
+## Machine Learning Pipeline
 
-```
+### Data Preprocessing
+
+- Missing value handling
+- Feature engineering
+- Categorical encoding
+- Feature scaling
+
+### Feature Engineering
+
+- Passenger Title extraction
+- Deck extraction from Cabin
+- Family Size creation
+
+### Model
+
+- Support Vector Machine (SVC)
+- GridSearchCV hyperparameter tuning
+- Pipeline + ColumnTransformer
+
+---
+
+## Model Performance
+
+| Metric | Value |
+|--------|------:|
+| Model | Support Vector Classifier (SVC) |
+| Training Accuracy | **81.56%** |
+| Cross Validation Score | **82.45%** |
+
+### Best Hyperparameters
+
+| Parameter | Value |
+|-----------|-------|
+| C | 1 |
+| Kernel | RBF |
+| Gamma | scale |
+
+---
+
+## Project Structure
+
+```text
 Titanic-Survival-Prediction/
 │
-├── Titanic_Survival_Prediction.ipynb
-├── train.csv
-├── test.csv
-├── submission.csv
-├── README.md
-└── requirements.txt
+├── data/
+│   ├── train.csv
+│   └── test.csv
+│
+├── model/
+│   ├── titanic_pipeline.pkl
+│   └── metrics.json
+│
+├── src/
+│   ├── app.py
+│   ├── train.py
+│   ├── predict.py
+│   └── preprocessing.py
+│
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## How to Run
+## Run Locally
 
-1. Clone the repository
+Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Titanic-Survival-Prediction.git
+git clone https://github.com/Panwithaging/Titanic-Survival-Prediction.git
 ```
 
-2. Install the required libraries
+Go to the project folder
+
+```bash
+cd Titanic-Survival-Prediction
+```
+
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Open the notebook
+Run the Streamlit application
 
 ```bash
-jupyter notebook Titanic_Survival_Prediction.ipynb
+streamlit run src/app.py
 ```
 
 ---
 
-## Future Improvements
+## Application Preview
 
-- Experiment with XGBoost, LightGBM, and CatBoost
-- Perform advanced feature engineering
-- Try ensemble learning methods
-- Explore additional hyperparameter optimization techniques
+Add screenshots of:
+
+- Home page
+- User input sidebar
+- Prediction result
+- Charts and confidence visualization
+
+---
+
+## Dataset
+
+Kaggle Titanic: Machine Learning from Disaster dataset.
 
 ---
 
@@ -192,4 +149,7 @@ jupyter notebook Titanic_Survival_Prediction.ipynb
 
 **Tushar Panging**
 
-If you found this project useful, feel free to ⭐ the repository.
+GitHub: https://github.com/Panwithaging
+**Tushar Panging**
+
+GitHub: https://github.com/Panwithaging
